@@ -22,7 +22,7 @@ declare module "rich-presence-builder" {
     url: StringResolvable<any>
   }
 
-  export = class RichPresence {
+  export class RichPresence {
     constructor(data: PresenceData)
     private _clientID?: string
     private _client?: Client
@@ -112,6 +112,6 @@ declare module "rich-presence-builder" {
     // then<R>(resolve: (res: RichPresence) => R): R
     // then<R, RJ>(resolve: (res: RichPresence) => R, reject: (error: Error) => RJ): R | RJ
     // catch<RJ>(reject: (error: Error) => RJ): RJ
-    interval(ms: number, times?: number): this
+    interval(times?: number, ms?: number): object
   }
 }
